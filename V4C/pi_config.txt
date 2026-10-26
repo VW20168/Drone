@@ -1,0 +1,13 @@
+dtparam=i2c_arm=on
+dtoverlay=i2c-gpio,bus=4,i2c_gpio_sda=10,i2c_gpio_scl=9  ##BMP280,Brometer
+dtoverlay=i2c-gpio,bus=5,i2c_gpio_sda=5,i2c_gpio_scl=6   ##INA219, Battery
+dtoverlay=i2c-gpio,bus=6,i2c_gpio_sda=23,i2c_gpio_scl=24 ##Laser
+dtparam=spi=on
+core_freq=250
+enable_uart=1
+force_turbo=1
+
+dtoverlay=ov64a40,cam0,link-frequency=360000000
+camera_auto_detect=0
+
+dtoverlay=pwm-pi5
